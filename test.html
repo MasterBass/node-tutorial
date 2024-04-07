@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function sum(a, b, c) {
+            return c * (a + b);
+        }
+
+        function getFunc(c) {
+            return () => sum(3, 7, c);
+        }
+
+        const obj = {
+            func: (x) => getFunc(x)()
+        };
+
+        console.log(obj.func(3));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
